@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta
+      name="description"
+      content="Human understanding of a video stream is naturally broad. To transfer this perception to intelligent machines, learning abstracting knowledge from different perspectives plays a crucial role. Hier-EgoPack creates a backpack of skills that an agent can reuse when it needs to learn a novel task."
+    />
+    <meta
+      property="og:title"
+      content="Hier-EgoPack: Hierarchical Egocentric Video Understanding with Diverse Task Perspectives"
+    />
+    <meta
+      property="og:description"
+      content="Human understanding of a video stream is naturally broad. To transfer this perception to intelligent machines, learning abstracting knowledge from different perspectives plays a crucial role. Hier-EgoPack creates a backpack of skills that an agent can reuse when it needs to learn a novel task."
+    />
+    <meta property="og:url" content="sapeirone.github.io/Hier-EgoPack" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/teaser.png" />
+    <!--meta property="og:image:width" content="1200"/-->
+    <!--meta property="og:image:height" content="630"/-->
+
+    <meta
+      name="twitter:title"
+      content="Hier-EgoPack: Hierarchical Egocentric Video Understanding with Diverse Task Perspectives"
+    />
+    <meta
+      name="twitter:description"
+      content="Human understanding of a video stream is naturally broad. To transfer this perception to intelligent machines, learning abstracting knowledge from different perspectives plays a crucial role. Hier-EgoPack creates a backpack of skills that an agent can reuse when it needs to learn a novel task."
+    />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/image/teaser.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Keywords for your paper to be indexed by-->
+    <meta
+      name="keywords"
+      content="Egocentric Vision; Computer Vision; Deep Learning"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>
+      Hier-EgoPack: Hierarchical Egocentric Video Understanding with Diverse
+      Task Perspectives
+    </title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+
+    <script async data-id="101477061" src="//static.getclicky.com/js"></script>
+
+    <link rel="stylesheet" href="static/css/bulma.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="static/css/index.css" />
+
+    <script src="static/js/jquery.min.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+
+    <style type="text/css"></style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                Hier-EgoPack: Hierarchical Egocentric Video<br />Understanding
+                with Diverse Task Perspectives
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <!-- Paper authors -->
+                <span class="author-block"
+                  ><a
+                    href="https://scholar.google.com/citations?user=K0efPssAAAAJ"
+                    target="_blank"
+                    >Simone Alberto Peirone</a
+                  >,</span
+                >
+                <span class="author-block"
+                  ><a
+                    href="https://scholar.google.com/citations?user=7MJdvzYAAAAJ"
+                    target="_blank"
+                    >Francesca Pistilli</a
+                  >,</span
+                >
+                <span class="author-block"
+                  ><a
+                    href="https://scholar.google.com/citations?user=yQqW5q0AAAAJ"
+                    target="_blank"
+                    >Antonio Alliegro</a
+                  >,</span
+                >
+                <span class="author-block"
+                  ><a
+                    href="https://scholar.google.com/citations?user=ykFtI-QAAAAJ"
+                    target="_blank"
+                    >Tatiana Tommasi</a
+                  >,</span
+                >
+                <span class="author-block"
+                  ><a
+                    href="https://scholar.google.com/citations?user=i4rm0tYAAAAJ"
+                    target="_blank"
+                    >Giuseppe Averta</a
+                  ></span
+                >
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  Politecnico di Torino&nbsp;&nbsp;
+                  <br />
+                  <small><tt>simone.peirone@polito.it</tt></small>
+                  <br />
+                  <b>ArXiv (Feb. 2025)</b>
+                </span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- Arxiv PDF link -->
+
+                  <span class="link-block">
+                    <a
+                      href=""
+                      target="_blank"
+                      title="Link to ArXiv paper"
+                      class="external-link button is-normal is-rounded is-danger is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper (ArXiv)</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a
+                      href="https://openaccess.thecvf.com/content/CVPR2024/papers/Peirone_A_Backpack_Full_of_Skills_Egocentric_Video_Understanding_with_Diverse_CVPR_2024_paper.pdf"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>CVPR 2024 Paper</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a
+                      href="https://www.youtube.com/watch?v=roKNbBP5AXY"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-video"></i>
+                      </span>
+                      <span>Video</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/sapeirone/hier-egopack"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+
+                  <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                    <a
+                      href="https://colab.research.google.com/github/sapeirone/hier-egopack/blob/main/quickstart.ipynb"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <img width="90%" src="static/images/colab.png" />
+                      </span>
+                      <span>Run on Colab</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaser video-->
+    <section class="hero teaser">
+      <div
+        class="container is-max-desktop"
+        style="width: calc(100% - 32px); max-width: 720px; margin-bottom: 32px"
+      >
+        <iframe
+          style="width: 100% !important; aspect-ratio: 16/9"
+          src="https://www.youtube.com/embed/roKNbBP5AXY?vq=hd720"
+          title="A Backpack Full of Skills: Egocentric Video Understanding with Diverse Task Perspectives"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+    <!-- End teaser video -->
+
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Our comprehension of video streams depicting human activities is
+                naturally multifaceted: in just a few moments, we can grasp what
+                is happening, identify the relevance and interactions of objects
+                in the scene, and forecast what will happen soon, everything all
+                at once. To endow autonomous systems with such a holistic
+                perception, learning how to correlate concepts, abstract
+                knowledge across diverse tasks, and leverage tasks synergies
+                when learning novel skills is essential. A significant step in
+                this direction is EgoPack, a unified framework for understanding
+                human activities across diverse tasks with minimal overhead.
+                EgoPack promotes information sharing and collaboration among
+                downstream tasks, essential for efficiently learning new skills.
+                In this paper, we introduce Hier-EgoPack, which advances EgoPack
+                by enabling reasoning also across diverse temporal
+                granularities, which expands its applicability to a broader
+                range of downstream tasks. To achieve this, we propose a novel
+                hierarchical architecture for temporal reasoning equipped with a
+                GNN layer specifically designed to tackle the challenges of
+                multi-granularity reasoning effectively. We evaluate our
+                approach on multiple Ego4d benchmarks involving both clip-level
+                and frame-level reasoning, demonstrating how our hierarchical
+                unified architecture effectively solves these diverse tasks
+                simultaneously.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End paper abstract -->
+
+    <section
+      class="section hero"
+      style="padding-bottom: 0.75rem; padding-top: 1.5rem"
+    >
+      <div class="container is-max-desktop">
+        <div
+          class="hero-body"
+          style="padding-bottom: 0.75rem; padding-top: 1.5rem"
+        >
+          <h3 class="title is-3">What can we learn from a video?</h3>
+          <p>
+            Different egocentric video tasks can provide
+            <b>different, and possibly complementary, perspectives</b> on what
+            the user is doing. For example, learning to recognise human actions
+            can give clues as to which objects are being manipulated or what
+            will happen next.
+          </p>
+          <figure class="image" style="margin-top: 32px; margin-bottom: 32px">
+            <img
+              src="static/images/what_can_we_learn.png"
+              alt=""
+              style="max-width: 768px; margin: auto"
+            />
+          </figure>
+          <h4 class="title is-4">How can we learn from these perspectives?</h4>
+          <p>
+            Different approaches can be used to learn from these tasks.
+            <b>Single task</b> models learn unique weights for each task.
+            <b>Multi-task learning</b> shares a common backbone among the
+            different tasks, with small task-specific heads on top.
+            <b>Task translation</b> is a more recent approach that learns to
+            translate the contributions of different task to solve one of them.
+          </p>
+          <figure class="image" style="margin-top: 32px; margin-bottom: 32px">
+            <img
+              src="static/images/related.png"
+              alt=""
+              style="max-width: 768px; margin: auto"
+            />
+          </figure>
+          <p>
+            All these approaches have some limitations. For example,
+            <b>multi-task learning</b> can share weights across different tasks,
+            but it <b>does not explicitly model cross-task sinergies</b> and can
+            lead to negative transfer between tasks.
+            <br />
+            Likewise, the <b>cross-task translation</b> mechanism proposed by
+            EgoT2 combines perspectives from different tasks but it
+            <b>needs to know all tasks before-hand</b> and requires separate
+            models for each task.
+          </p>
+          <br />
+          <h4 class="title is-4">
+            A new paradigm for Egocentric Video Understanding
+          </h4>
+          <p>
+            We propose an approach for
+            <b>egocentric video understanding</b> that focuses on
+            <b>knowledge reuse</b> across different tasks. To do so, we adopt a
+            graph-based shared model and the goal is to outperform single and
+            multi-task baselines adapted to our scenario.
+          </p>
+          <figure class="image" style="margin-top: 32px; margin-bottom: 32px">
+            <img
+              src="static/images/paradigm.png"
+              alt=""
+              style="max-width: 768px; margin: auto"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="section hero"
+      style="padding-bottom: 0.75rem; padding-top: 1.5rem"
+    >
+      <div class="container is-max-desktop">
+        <div
+          class="hero-body"
+          style="padding-bottom: 0.75rem; padding-top: 1.5rem"
+        >
+          <h3 class="title is-3">Proposed Architecture</h3>
+          <p>
+            Our approach is called <b>Hier-EgoPack</b> and is composed of two
+            stages. In the first stage, a multi-task model is trained on a set
+            of K known tasks. In the second stage, the model is fine-tuned on a
+            novel task using Hier-EgoPack’s cross-task interaction mechanism.
+          </p>
+          <figure class="image" style="margin-top: 8px; margin-bottom: 8px">
+            <img
+              src="static/images/method.png"
+              alt=""
+              style="max-width: 768px; margin: auto; margin-bottom: 48px"
+            />
+          </figure>
+
+          <h4 class="title is-4">Step 1: MTL Pre-training step</h4>
+          <div class="columns is-vcentered is-flex-center is-multiline">
+            <div class="column is-half">
+              <div class="text-block">
+                <p>
+                  To share the same model across different tasks, we propose to
+                  <b>model video as graphs</b> whose nodes correspond to
+                  temporal segments of the video, edges connect temporally close
+                  nodes and egocentric video tasks can be represented as
+                  different graph operations.
+                </p>
+                <br /><br />
+                <p>
+                  In this framework, we can implement temporal reasoning as a
+                  <strong>hierarchical graph neural network</strong> that learns
+                  progressively coarsened representations of the input video.
+                </p>
+                <br /><br />
+                <p>
+                  Finally, a set of <b>task-specific heads</b> project the nodes
+                  in the output space of each task.
+                </p>
+              </div>
+            </div>
+            <div class="column is-half">
+              <figure
+                class="image"
+                style="margin-top: 8px; margin-bottom: 8px; max-width: 512px"
+              >
+                <img
+                  src="static/images/arch.png"
+                  alt=""
+                  style="max-width: 512px; margin: auto"
+                />
+              </figure>
+            </div>
+          </div>
+          <h5 class="title is-5">Temporal Distance Gated Convolution (TDGC)</h5>
+          <div class="columns is-vcentered is-flex-center is-multiline">
+            <div class="column is-half">
+              <div class="text-block">
+                At the core of Hier-EgoPack is
+                <strong>Temporal Distance Gated Convolution (TDGC)</strong>, a
+                novel GNN layer for egocentric vision tasks that require a
+                strong <strong><i>sense of time</i></strong
+                >, i.e., the ability to effectively reason on the order of the
+                events in a video.
+              </div>
+            </div>
+            <div class="column is-half">
+              <figure
+                class="image"
+                style="margin-top: 8px; margin-bottom: 8px; max-width: 512px"
+              >
+                <img
+                  src="static/images/tdgc.png"
+                  alt=""
+                  style="max-width: 512px; margin: auto"
+                />
+              </figure>
+            </div>
+          </div>
+
+          <h4 class="title is-4">Step 2: Novel Task Learning</h4>
+          <div class="columns is-vcentered is-flex-center is-multiline">
+            <div class="column is-half">
+              <div class="text-block">
+                <p>
+                  These heads model different and complementary perspectives on
+                  the content of the video. We can collect these perspectives in
+                  a set of action-wise <b>task-specific prototypes</b>.
+                  <br /><br />
+                  We call these prototypes a <b>backpack of skills</b> and they
+                  represent a frozen snapshot of what the model has learnt in
+                  the pre-training phase.
+                </p>
+              </div>
+            </div>
+            <div class="column is-half">
+              <figure class="image" style="margin-top: 8px; margin-bottom: 8px">
+                <img
+                  src="static/images/egopack.png"
+                  alt=""
+                  style="max-width: 768px; margin: auto"
+                />
+              </figure>
+            </div>
+            <div class="column is-half">
+              <div class="text-block">
+                <ol>
+                  <li>
+                    When learning a novel task, we feed the temporal features
+                    through the task-specific heads of the pre-training tasks.
+                  </li>
+                  <br />
+                  <li>
+                    These features act as queries to look for the closest
+                    matching prototypes using k-NN in the features space.
+                  </li>
+                  <br />
+                  <li>
+                    We refine the task features using
+                    <b>Message Passing with task prototypes</b>.
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class="column is-half">
+              <figure class="image" style="margin-top: 8px; margin-bottom: 8px">
+                <img
+                  src="static/images/interaction.png"
+                  alt=""
+                  style="max-width: 768px; margin: auto; margin-bottom: 16px"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="section hero"
+      style="padding-bottom: 0.75rem; padding-top: 1.5rem"
+    >
+      <div class="container is-max-desktop">
+        <div
+          class="hero-body"
+          style="padding-bottom: 0.75rem; padding-top: 1.5rem"
+        >
+          <h3 class="title is-3">Experimental results</h3>
+          <p>
+            <strong>We validate Hier-EgoPack on five Ego4d benchmarks</strong>:
+            Action Recognition (AR), Long Term Anticipation (LTA), Object State
+            Change Classification (OSCC), Point of No Return (PNR) and Moment
+            Queries (MQ).
+          </p>
+          <figure class="image" style="margin-top: 32px; margin-bottom: 16px">
+            <img
+              src="static/images/main_results.png"
+              alt="Main results on Ego4d benchmarks"
+              style="margin: auto; margin-bottom: 16px"
+            />
+          </figure>
+          <br />
+          <div class="columns is-vcentered is-flex-center is-multiline">
+            <div class="column">
+              <div class="text-block">
+                <h5 class="title is-5">
+                  Activation frequency for the task-specific prototypes from
+                  different support tasks
+                </h5>
+                <p>
+                  We focus on the Top-20 most activated prototypes across the
+                  support tasks. LTA and OSCC have more uniform activations
+                  across different support tasks, i.e., they look at similar
+                  prototypes, while MQ exhibit more diverse activations.
+                </p>
+              </div>
+              <figure
+                class="image"
+                style="margin-top: 32px; margin-bottom: 16px"
+              >
+                <img
+                  src="static/images/activation_freq.png"
+                  alt=""
+                  style="margin: auto; margin-bottom: 16px"
+                />
+              </figure>
+            </div>
+          </div>
+          <div class="columns is-vcentered is-flex-center is-multiline">
+            <div class="column">
+              <div class="text-block">
+                <h5 class="title is-5">
+                  Activations consensus for different novel tasks
+                </h5>
+                <p>
+                  Activations consensus between two support tasks is defined as
+                  the percentage of their prototypes corresponding to the same
+                  label activated by the two tasks. Fine-grained tasks, i.e.,
+                  AR, OSCC and LTA, have higher average consensus. On the
+                  contrary, MQ has lower average consensus.
+                </p>
+              </div>
+              <figure
+                class="image"
+                style="margin-top: 32px; margin-bottom: 16px"
+              >
+                <img
+                  src="static/images/consensus.png"
+                  alt=""
+                  style="margin: auto; margin-bottom: 16px"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">Cite us</h2>
+        <pre><code>@article{peirone2025backpack,
+  title   = {Hier-EgoPack: Hierarchical Egocentric Video Understanding with Diverse Task Perspectives},
+  author  = {Peirone, Simone Alberto and Pistilli, Francesca and Alliegro, Antonio and Tommasi, Tatiana and Averta, Giuseppe},
+  journal = {arXiv preprint arXiv:2502.},
+  year    = {2025}
+}</code></pre>
+        <br />
+        Please consider also citing our original CVPR publication:
+        <pre><code>@InProceedings{peirone2024backpack,
+  author    = {Peirone, Simone Alberto and Pistilli, Francesca and Alliegro, Antonio and Averta, Giuseppe},
+  title     = {A Backpack Full of Skills: Egocentric Video Understanding with Diverse Task Perspectives},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  month     = {June},
+  year      = {2024},
+  pages     = {18275-18285}
+}</code></pre>
+      </div>
+    </section>
+    <!--End BibTex citation -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This page was built using the
+                <a
+                  href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank"
+                  >Academic Project Page Template</a
+                >
+                which was adopted from the <a
+                  href="https://nerfies.github.io"
+                  target="_blank"
+                  >Nerfies</a
+                > project page. You are free to borrow the of this website, we
+                just ask that you link back to this page in the footer. <br />
+                This website is licensed under a
+                <a
+                  rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  target="_blank"
+                  >Creative Commons Attribution-ShareAlike 4.0 International
+                  License</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
