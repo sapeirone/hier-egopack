@@ -1,0 +1,7 @@
+_target_: data.ego4d.AR.ARDataset
+version: 1
+
+root: data/ego4d
+
+num_verbs: 115
+num_nouns: 478

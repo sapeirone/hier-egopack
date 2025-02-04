@@ -1,0 +1,14 @@
+defaults:
+  - _base_
+  - override egopack_task: ego4d/lta
+
+batch_size: 64
+
+# override model.depth
+model:
+  depth: 1
+
+hydra:
+  searchpath:
+    - file://configs/experiments
+    - file://configs/components

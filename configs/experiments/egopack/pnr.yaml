@@ -1,0 +1,17 @@
+defaults:
+  - _base_
+  - override egopack_task: ego4d/pnr
+
+batch_size: 128
+
+optimizer:
+  lr: 1e-5
+
+# override model.depth
+model:
+  depth: 1
+
+hydra:
+  searchpath:
+    - file://configs/experiments
+    - file://configs/components

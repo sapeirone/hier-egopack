@@ -1,0 +1,5 @@
+_target_: torch_geometric.nn.norm.GraphNorm
+
+# TODO: it would be nice to specify this value in the model config rather than here
+# but i don't know how to do that
+in_channels: ???

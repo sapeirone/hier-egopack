@@ -1,0 +1,41 @@
+_target_: models.graph_hier.GraphHier
+
+# Hidden size used in the temporal convolution layers
+hidden_size: 768
+
+# Number of conv1d layers at each depth
+n_layers: 2
+
+# use layer_norm between gnn layers
+use_norm: True
+
+# Local temporal connectivity at each layer
+k: 2.0
+
+# Number of temporal convolution layers
+depth: 8
+
+# Dropout in the initial projection head
+projection_type: simple # simple or mlp
+projection_dropout: 0
+
+# Dropout
+dropout: 0.1
+
+# ffn after each graph conv layer
+ffn: False
+ffn_expansion_ratio: 1
+ffn_dropout: 0
+
+# as seen in https://github.com/showlab/EgoVLP/blob/main/model/video_transformer.py#L140
+pre_norm: False
+
+defaults:
+  - conv: DGC
+
+conv:
+  in_channels: ${model.hidden_size}
+  out_channels: ${model.hidden_size}
+
+# pooling strategy
+pool: mean # max or mean

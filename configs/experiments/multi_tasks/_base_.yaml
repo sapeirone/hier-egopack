@@ -1,0 +1,36 @@
+defaults:
+  - defaults
+  - model: graph_hier
+  - features: ego4d/egovlp
+  # Register all tasks here
+  - task/ego4d/ar@tasks.ego4d/ar
+  - task/ego4d/oscc@tasks.ego4d/oscc
+  - task/ego4d/lta@tasks.ego4d/lta
+  - task/ego4d/pnr@tasks.ego4d/pnr
+  - task/ego4d/mq@tasks.ego4d/mq
+  # Register all datasets here
+  - dataset/ego4d/ar@datasets.ego4d/ar
+  - dataset/ego4d/oscc@datasets.ego4d/oscc
+  - dataset/ego4d/lta@datasets.ego4d/lta
+  - dataset/ego4d/pnr@datasets.ego4d/pnr
+  - dataset/ego4d/mq@datasets.ego4d/mq
+  # Register all train meters here
+  - train_meter/ego4d/ar@train_meters.ego4d/ar
+  - train_meter/ego4d/oscc@train_meters.ego4d/oscc
+  - train_meter/ego4d/lta@train_meters.ego4d/lta
+  - train_meter/ego4d/pnr@train_meters.ego4d/pnr
+  - train_meter/ego4d/mq@train_meters.ego4d/mq
+  # Register all eval meters here
+  - eval_meter/ego4d/ar@eval_meters.ego4d/ar
+  - eval_meter/ego4d/oscc@eval_meters.ego4d/oscc
+  - eval_meter/ego4d/lta@eval_meters.ego4d/lta
+  - eval_meter/ego4d/pnr@eval_meters.ego4d/pnr
+  - eval_meter/ego4d/mq@eval_meters.ego4d/mq
+  - _self_
+
+mtl_tasks: ???
+
+# override model.depth
+model:
+  depth: 8
+  dropout: 0.1

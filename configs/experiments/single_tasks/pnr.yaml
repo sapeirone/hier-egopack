@@ -1,0 +1,22 @@
+defaults:
+  - _base_
+  - task: ego4d/pnr
+  - dataset: ego4d/pnr
+  # Meters for training and evaluation
+  - train_meter: ego4d/pnr
+  - eval_meter: ego4d/pnr
+  - _self_
+
+batch_size: 128
+
+optimizer:
+  lr: 1e-5
+
+# override model.depth
+model:
+  depth: 1
+
+hydra:
+  searchpath:
+    - file://configs/experiments
+    - file://configs/components

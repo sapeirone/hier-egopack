@@ -1,0 +1,10 @@
+_target_: models.tasks.ego4d.pnr.PNRTask
+
+name: ego4d/pnr
+
+input_size: ${model.hidden_size}
+features_size: 768
+
+dropout: 0.0 
+
+loss_weight: 1.0

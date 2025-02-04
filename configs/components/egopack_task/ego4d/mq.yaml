@@ -1,0 +1,13 @@
+###############################
+# EgoPack Moment Queries Task #
+###############################
+defaults:   
+  - /task/ego4d/mq@_here_
+  - _self_
+  
+_target_: models.tasks.ego4d.mq.EgoPackMQTask
+
+
+# EgoPack-specific configurations:
+fusion_dropout: 0
+project_before_fusion: True  # Apply the same neck as input features before fusion

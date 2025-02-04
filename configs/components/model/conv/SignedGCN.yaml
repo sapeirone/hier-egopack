@@ -1,0 +1,3 @@
+_target_: models.conv.signed_conv_wrapper.SignedDistanceConvWrapper
+
+first_aggr: True

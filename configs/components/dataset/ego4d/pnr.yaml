@@ -1,0 +1,4 @@
+_target_: data.ego4d.PNR.PNRDataset
+version: 1
+
+root: data/ego4d

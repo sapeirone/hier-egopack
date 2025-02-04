@@ -1,0 +1,16 @@
+_target_: models.tasks.ego4d.lta.LTATask
+
+name: ego4d/lta
+
+input_size: ${model.hidden_size}
+features_size: 768
+
+num_verbs: 115
+num_nouns: 478
+
+dropout: 0.0 
+head_dropout: 0.0
+
+K: 20
+
+loss_weight: 1.0

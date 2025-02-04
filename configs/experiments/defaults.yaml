@@ -1,0 +1,55 @@
+# Default configuration file for all experiments
+
+name: base
+name_pattern: null
+device: cuda
+seed: 1234567891
+
+# This flag triggers a warning if there are uncommitted changes in the code
+git_dirty_warn_only: True
+
+# Default hydra configuration
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d-%H-%M-%S}
+
+
+# True for train + eval, False for eval only
+train: True
+
+# Resume and save paths
+resume_from: null
+save_to: null
+
+# Number of steps between evaluation steps
+eval_interval: -1
+
+
+##########################
+# Training configuration #
+##########################
+
+batch_size: 4
+num_workers: 1
+persistent_workers: True
+num_epochs: 15
+steps_per_round: 100
+
+# LR scheduler configuration
+lr_warmup: True
+lr_warmup_epochs: 5
+# Minimum learning rate
+lr_min: 1e-8
+
+# Optimizer parameters
+optimizer:
+  _target_: torch.optim.Adam
+  lr: 1e-4
+  weight_decay: 1e-5
+
+gradient_clip: 1.0
+save_model: False
+
+defaults:
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog

@@ -1,0 +1,19 @@
+defaults:
+  - _base_
+  - task: ego4d/lta
+  - dataset: ego4d/lta
+  # Meters for training and evaluation
+  - train_meter: ego4d/lta
+  - eval_meter: ego4d/lta
+  - _self_
+
+batch_size: 64
+
+# override model.depth
+model:
+  depth: 1
+
+hydra:
+  searchpath:
+    - file://configs/experiments
+    - file://configs/components

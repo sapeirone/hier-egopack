@@ -1,0 +1,18 @@
+defaults:
+  - _base_
+  - dataset: ego4d/mq
+  - task: ego4d/mq
+  - train_meter: ego4d/mq
+  - eval_meter: ego4d/mq
+  - _self_
+
+optimizer:
+  weight_decay: 1e-3
+
+model:
+  depth: 8
+
+hydra:
+  searchpath:
+    - file://configs/experiments
+    - file://configs/components

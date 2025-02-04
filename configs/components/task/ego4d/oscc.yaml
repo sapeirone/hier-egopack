@@ -1,0 +1,11 @@
+_target_: models.tasks.ego4d.oscc.OSCCTask
+
+name: ego4d/oscc
+
+input_size: ${model.hidden_size}
+features_size: 768
+
+dropout: 0.0 
+head_dropout: 0.0
+
+loss_weight: 1.0

@@ -1,0 +1,14 @@
+_target_: models.tasks.utils.classifier.Classifier
+
+features_size: ???
+
+n_classes: ??? 
+
+dropout: 0
+
+prior_prob: 0.01
+
+n_layers: 2
+
+# Hidden size of the classifier
+hidden_size: 512

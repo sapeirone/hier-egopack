@@ -1,0 +1,9 @@
+defaults:
+  - _base_
+
+mtl_tasks: [ego4d/ar,ego4d/lta,ego4d/mq,ego4d/oscc,ego4d/pnr]
+
+hydra:
+  searchpath:
+    - file://configs/experiments
+    - file://configs/components

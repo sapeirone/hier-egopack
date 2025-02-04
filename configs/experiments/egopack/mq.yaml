@@ -1,0 +1,17 @@
+defaults:
+  - _base_
+  - override egopack_task: ego4d/mq
+
+optimizer:
+  weight_decay: 1e-3
+
+model:
+  depth: 8
+
+train_temporal_model: True
+train_projections: True
+
+hydra:
+  searchpath:
+    - file://configs/experiments
+    - file://configs/components

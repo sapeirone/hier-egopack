@@ -1,0 +1,33 @@
+_target_: models.tasks.ego4d.ar.ARTask
+
+name: ego4d/ar
+
+defaults:
+  - /classifier@verb_classifier: MLP  # can be overriden with syntax 'classifier@task.verb_classifier=GNN' at runtime (weird)
+  - /classifier@noun_classifier: MLP
+
+input_size: ${model.hidden_size} 
+features_size: 768
+
+num_verbs: 115
+num_nouns: 478
+
+dropout: 0.0
+
+loss_weight: 1.0
+
+# Update arguments of the classifier
+verb_classifier:
+  features_size: ${..features_size}
+  hidden_size: 512
+  n_classes: ${..num_verbs}
+  dropout: 0
+  prior_prob: 0
+
+# Update arguments of the classifier
+noun_classifier:
+  features_size: ${..features_size}
+  hidden_size: 512
+  n_classes: ${..num_nouns}
+  dropout: 0
+  prior_prob: 0

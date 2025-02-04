@@ -1,0 +1,4 @@
+_target_: utils.meters.ego4d.mq.EvalMeter
+fast: False
+
+nms_sigma: 2.0

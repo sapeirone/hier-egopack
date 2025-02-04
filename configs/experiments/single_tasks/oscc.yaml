@@ -1,0 +1,20 @@
+defaults:
+  - _base_
+  - task: ego4d/oscc
+  - dataset: ego4d/oscc
+  # Meters for training and evaluation
+  - train_meter: ego4d/oscc
+  - eval_meter: ego4d/oscc
+  - _self_
+
+optimizer:
+  lr: 1e-5
+
+# override model.depth
+model:
+  depth: 1
+
+hydra:
+  searchpath:
+    - file://configs/experiments
+    - file://configs/components

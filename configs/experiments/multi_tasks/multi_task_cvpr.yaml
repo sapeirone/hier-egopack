@@ -1,0 +1,13 @@
+defaults:
+  - _base_
+
+# override model.depth
+model:
+  depth: 1
+
+mtl_tasks: [ego4d/ar,ego4d/lta,ego4d/oscc,ego4d/pnr]
+
+hydra:
+  searchpath:
+    - file://configs/experiments
+    - file://configs/components

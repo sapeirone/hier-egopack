@@ -1,0 +1,13 @@
+_target_: models.conv.distance_gated_conv.DistanceGatedConv
+bias: True
+pos_hidden_channels: 256
+aggr: 'mean'
+
+# Activation function for the distance gated convolution
+pos_act: tanh # 'tanh' or 'relu' or 'sigmoid'
+
+# Use signed temporal distance as edge weight
+use_signed_temporal_distance: True
+
+# Use absolute relative distance as edge attribute
+use_pos_attr: True

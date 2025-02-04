@@ -1,0 +1,13 @@
+###################################################
+# EgoPack Object State Change Classification Task #
+###################################################
+defaults:   
+  - /task/ego4d/oscc@_here_
+  - _self_
+  
+_target_: models.tasks.ego4d.oscc.EgoPackOSCCTask
+
+# EgoPack-specific configurations:
+fusion_level: features  # Literal['features', 'logits', 'none']
+fusion_dropout: 0.1
+aux_tasks: null

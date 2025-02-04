@@ -1,0 +1,14 @@
+defaults:
+  - defaults
+  - model: graph_hier
+  - features: ego4d/egovlp
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog
+  - _self_
+
+model:
+  dropout: 0.1
+
+train_temporal_model: true
+
+from_pretrain: null

@@ -1,0 +1,13 @@
+###################################
+# EgoPack Point of No Return Task #
+###################################
+defaults:   
+  - /task/ego4d/pnr@_here_
+  - _self_
+  
+_target_: models.tasks.ego4d.pnr.EgoPackPNRTask
+
+# EgoPack-specific configurations:
+fusion_level: features  # Literal['features', 'logits', 'none']
+fusion_dropout: 0.1
+aux_tasks: null

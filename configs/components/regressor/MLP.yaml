@@ -1,0 +1,18 @@
+_target_: models.tasks.utils.classifier.Regressor
+
+# Input size of the regressor
+features_size: ???
+
+# Hidden size of the regressor
+hidden_size: ???
+
+n_layers: 1
+
+# Dropout on the input features
+dropout: 0
+
+# Use layer normalization in the regressor
+use_ln: True
+
+# Use bias in the regressor
+use_bias: True

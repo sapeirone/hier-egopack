@@ -1,0 +1,12 @@
+#######################################
+# EgoPack Long Term Anticipation Task #
+#######################################
+defaults:   
+  - /task/ego4d/lta@_here_
+  - _self_
+  
+_target_: models.tasks.ego4d.lta.EgoPackLTATask
+
+
+# EgoPack-specific configurations:
+# (none for this task)
