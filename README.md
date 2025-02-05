@@ -261,7 +261,7 @@ This study was carried out within the FAIR - Future Artificial Intelligence Rese
 @article{peirone2025backpack,
   title   = {Hier-EgoPack: Hierarchical Egocentric Video Understanding with Diverse Task Perspectives},
   author  = {Peirone, Simone Alberto and Pistilli, Francesca and Alliegro, Antonio and Tommasi, Tatiana and Averta, Giuseppe},
-  journal = {arXiv preprint arXiv:2502.},
+  journal = {arXiv preprint arXiv:2502.02487},
   year    = {2025}
 }
 ```
