@@ -11,7 +11,7 @@
 
 <div align="center">
 
-<a href='https://arxiv.org/abs/2502.xx' style="margin: 10px"><img src='https://img.shields.io/badge/Paper-Arxiv:2502.xx-red'></a>
+<a href='https://arxiv.org/abs/2502.02487' style="margin: 10px"><img src='https://img.shields.io/badge/Paper-Arxiv:2502.02487-red'></a>
 <a href='https://sapeirone.github.io/hier-egopack/' style="margin: 10px"><img src='https://img.shields.io/badge/Project-Page-Green'></a>
 <a target="_blank" href="https://colab.research.google.com/github/sapeirone/hier-egopack/blob/main/quickstart.ipynb" style="margin: 10px">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
